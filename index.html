@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      </svg>
+      MyBlog
+    </a>
+    <ul class="navbar__links">
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Blog list view (default) -->
+    <div id="blog-list-view">
+      <div class="page-header">
+        <h1>Latest Posts</h1>
+        <p>Thoughts, stories, and ideas</p>
+      </div>
+      <div id="blog-grid" class="blog-grid">
+        <!-- Posts rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Single post view (hidden by default) -->
+    <div id="post-detail-view" class="post-detail" style="display:none;">
+      <a href="#" class="post-detail__back" id="back-to-list">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to posts
+      </a>
+      <div class="post-detail__header">
+        <span class="card__tag" id="detail-tag"></span>
+        <h1 id="detail-title"></h1>
+        <div class="post-detail__meta">
+          <span id="detail-author"></span>
+          <span>&middot;</span>
+          <span id="detail-date"></span>
+        </div>
+      </div>
+      <div class="post-detail__content" id="detail-content">
+      </div>
+    </div>
+  </main>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
